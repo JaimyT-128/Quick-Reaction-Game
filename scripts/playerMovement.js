@@ -1,17 +1,20 @@
-var player_X = 2;
-var player_Y = 2;
+var player_X;
+var player_Y;
 
-setPlayer(player_X, player_Y);
 
 document.onkeydown = function(e) {
      if (e.keyCode == 38 || e.keyCode == 87) {
       movePlayer("up");
+      checkIfCaught();
     } else if (e.keyCode == 39 || e.keyCode == 68) {
       movePlayer("down");
+      checkIfCaught();
     } else if (e.keyCode == 37 || e.keyCode == 65) {
       movePlayer("left");
+      checkIfCaught();
     } else if (e.keyCode == 40 || e.keyCode == 83) {
       movePlayer("right");
+      checkIfCaught();
     }
 };
 
