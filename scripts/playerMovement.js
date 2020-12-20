@@ -2,6 +2,7 @@ var player_X;
 var player_Y;
 
 
+// Key detection for the arrow keys and w, a, s, d.
 document.onkeydown = function(e) {
      if (e.keyCode == 38 || e.keyCode == 87) {
       movePlayer("up");
@@ -18,14 +19,19 @@ document.onkeydown = function(e) {
     }
 };
 
+// Sets the player on the right position
 function setPlayer(x, y){
   var playerPosition = document.getElementById(x + "," + y);
   playerPosition.classList.add("player");
 }
+
+// Removes the player from the field.
 function removePlayer(x, y){
   var playerPosition = document.getElementById(x + "," + y);
   playerPosition.classList.remove("player");
 }
+
+// Moves the player by either incrementing or decrementing the position variables.
 function movePlayer(direction){
   if (direction == "left") {
     if (player_Y > 0) {
