@@ -1,0 +1,14 @@
+body{
+  background: black;
+}
+.cell{
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  background: indigo;
+  margin: 5px;
+}
+.player{
+  background: tomato;
+}
