@@ -5,16 +5,16 @@ var player_Y;
 document.onkeydown = function(e) {
      if (e.keyCode == 38 || e.keyCode == 87) {
       movePlayer("up");
-      checkIfCaught();
+      onTargetCapture();
     } else if (e.keyCode == 39 || e.keyCode == 68) {
       movePlayer("down");
-      checkIfCaught();
+      onTargetCapture();
     } else if (e.keyCode == 37 || e.keyCode == 65) {
       movePlayer("left");
-      checkIfCaught();
+      onTargetCapture();
     } else if (e.keyCode == 40 || e.keyCode == 83) {
       movePlayer("right");
-      checkIfCaught();
+      onTargetCapture();
     }
 };
 
